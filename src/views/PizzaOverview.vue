@@ -2,6 +2,7 @@
 import type { Pizza } from '@/model/model';
 import { type Ref, ref } from 'vue';
 import HelpMe from '@/components/HelpMe.vue';
+import PizzaListComponent from '@/components/PizzaListComponent.vue';
 
 const pizzen: Ref<Pizza[]> = ref([
   { name: 'Margarita', price: 10 },
@@ -18,10 +19,7 @@ function addNewPizza() {
 
 <template>
   <h1>Pizza Übersicht</h1>
-  <div v-for="pizza in pizzen" :key="pizza.name">
-    <div>Pizza: {{ pizza.name }}</div>
-    <div>Preis: {{ pizza.price }}€</div>
-  </div>
+  <PizzaListComponent v-model="pizzen"></PizzaListComponent>
 
 
   <div>
