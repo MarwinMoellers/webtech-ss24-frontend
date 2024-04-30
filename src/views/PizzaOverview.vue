@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import type { Pizza } from '@/model/model';
 import { type Ref, ref } from 'vue';
+import HelpMe from '@/components/HelpMe.vue';
 
 const pizzen: Ref<Pizza[]> = ref([
   { name: 'Margarita', price: 10 },
@@ -22,6 +23,7 @@ function addNewPizza() {
     <div>Preis: {{ pizza.price }}€</div>
   </div>
 
+
   <div>
     <label>Pizza Name</label>
     <input type="text" v-model="newPizza.name">
@@ -29,6 +31,8 @@ function addNewPizza() {
     <input type="number" v-model="newPizza.price">
     <button @click="addNewPizza()">Hinzufügen</button>
   </div>
+
+  <HelpMe />
 
 </template>
 
