@@ -5,6 +5,12 @@ import HelloWorld from './components/HelloWorld.vue';
 
 <template>
   <div style="color:red">Hallo Welt!</div>
+  <header>
+    <RouterLink to="/">Home</RouterLink>
+    <RouterLink to="/about">About</RouterLink>
+    <RouterLink to="/pizza">Pizza</RouterLink>
+  </header>
+  <RouterView />
 </template>
 
 <style scoped>
