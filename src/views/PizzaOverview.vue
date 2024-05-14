@@ -3,6 +3,7 @@ import type { Pizza } from '@/model/model';
 import { type Ref, ref } from 'vue';
 import HelpMe from '@/components/HelpMe.vue';
 import PizzaListComponent from '@/components/PizzaListComponent.vue';
+import axios from 'axios';
 
 const pizzen: Ref<Pizza[]> = ref([
   { name: 'Margarita', price: 10 },
@@ -15,6 +16,22 @@ let newPizza: Ref<Pizza> = ref({ name: 'hier name', price: 0 });
 function addNewPizza() {
   pizzen.value.push(newPizza.value);
 }
+
+axios.get('http://localhost:8080/pizza')
+    .then(function (response) {
+      // handle success
+      // console.log("response")
+      // console.log(response);
+      pizzen.value = response.data
+    })
+    .catch(function (error) {
+      // handle error
+      console.log(error);
+    })
+    .finally(function () {
+      // always executed
+    });
+
 </script>
 
 <template>
