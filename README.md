@@ -20,6 +20,9 @@
 
 - Konfiguration Frontend
   - https://vitejs.dev/guide/env-and-mode
+  - Defintion von Umgebungsvariablen in .env und .env.[mode]
+  - Zugriff auf Umgebungsvariablen über import.meta.env.VITE_[name-var]
+  - Typisieren .env Datei in env.d.ts
 
 This template should help get you started developing with Vue 3 in Vite.
 
