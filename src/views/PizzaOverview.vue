@@ -17,7 +17,7 @@ function addNewPizza() {
   pizzen.value.push(newPizza.value);
 }
 
-axios.get('http://localhost:8080/pizza')
+axios.get(import.meta.env.VITE_BACKEND_URL+'/pizza')
     .then(function (response) {
       // handle success
       // console.log("response")
