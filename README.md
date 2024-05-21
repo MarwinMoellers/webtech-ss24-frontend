@@ -1,14 +1,38 @@
 # webtech-ss24-frontend
 
+# Übungsnotizen
+
+## 21.5.24 Deployment und Fe-Konfig
+
+- Deployment
+    - Frontend
+      - Static Site
+      - npm install
+      - npm run build
+      - Publish dir: ./dist
+  - Backend
+    - Web Service
+    - Dockerfile neben build.gradle
+    - Definition für lauffähiges Image -> <>.jar name anpassen
+    - https://docs.docker.com/reference/dockerfile/
+    - https://spring.io/guides/topicals/spring-boot-docker
+    - Definition für Builder
+
+- Konfiguration Frontend
+  - https://vitejs.dev/guide/env-and-mode
+
 This template should help get you started developing with Vue 3 in Vite.
 
 ## Recommended IDE Setup
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and
+disable Vetur).
 
 ## Type Support for `.vue` Imports in TS
 
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) to make the TypeScript language service aware of `.vue` types.
+TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for
+type checking. In editors, we need [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) to make the
+TypeScript language service aware of `.vue` types.
 
 ## Customize configuration
 
