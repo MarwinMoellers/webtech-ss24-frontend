@@ -15,6 +15,7 @@ let newPizza: Ref<Pizza> = ref({ name: 'hier name', price: 0 });
 
 function addNewPizza() {
   pizzen.value.push(newPizza.value);
+  axios.post(import.meta.env.VITE_BACKEND_URL + '/pizza', newPizza.value)
 }
 
 axios.get(import.meta.env.VITE_BACKEND_URL + '/pizza')
